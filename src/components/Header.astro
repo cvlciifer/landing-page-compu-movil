@@ -71,10 +71,21 @@ import { NavigationLinks } from '@/config'
             <div
                 class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:gap-y-0 md:ps-7"
             >
-                {NavigationLinks.map(link => (
-                    <NavLink url={link.url} name={link.name} />
-                ))}
-                <AlgoliaDocSearch client:only="react" />
+                <a href="#features" class="font-medium text-neutral-600 hover:text-green-500 dark:text-neutral-400 dark:hover:text-green-400 transition-colors">
+                    La Carrera
+                </a>
+                <a href="#career" class="font-medium text-neutral-600 hover:text-green-500 dark:text-neutral-400 dark:hover:text-green-400 transition-colors">
+                    Campo Laboral
+                </a>
+                <a href="#curriculum" class="font-medium text-neutral-600 hover:text-green-500 dark:text-neutral-400 dark:hover:text-green-400 transition-colors">
+                    Malla
+                </a>
+                <a href="#admission" class="font-medium text-neutral-600 hover:text-green-500 dark:text-neutral-400 dark:hover:text-green-400 transition-colors">
+                    Admisión
+                </a>
+                <a href="#contact" class="font-medium text-neutral-600 hover:text-green-500 dark:text-neutral-400 dark:hover:text-green-400 transition-colors">
+                    Contacto
+                </a>
                 <span class="hidden md:inline-block ml-[-1.5rem]">
                     <Theme />
                 </span>
