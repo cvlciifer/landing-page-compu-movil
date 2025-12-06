@@ -1,10 +1,8 @@
-# Gblog is an open-source, simple, and beautiful blog built with Astro.
+# Ingeniería en Informática - UTEM
 
-![godruoyi gblog](https://images.godruoyi.com/logos/gblog-1.png)
+Landing page para la carrera de Ingeniería en Informática de la Universidad Tecnológica Metropolitana (UTEM).
 
-Gblog is a blog template designed for those who are unable or unwilling to write frontend code. All you need to do is find an interesting Tailwind CSS template from elsewhere and paste it into Gblog, and it will function seamlessly. Additionally, you can customize your own blog without to write any JavaScript code.
-
-**[View Live Demo](https://godruoyi.com)**
+Desarrollado con Astro, Tailwind CSS y TypeScript.
 
 ## Features
 

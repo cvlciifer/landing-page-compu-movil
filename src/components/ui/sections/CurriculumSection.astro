@@ -1,4 +1,86 @@
 ---
+const semestres = [
+    {
+        numero: 1,
+        asignaturas: [
+            "Introducción a la Ingeniería en Informática",
+            "Matemática I",
+            "Fundamentos de Programación",
+            "Comunicación Efectiva",
+            "Inglés I"
+        ]
+    },
+    {
+        numero: 2,
+        asignaturas: [
+            "Matemática II",
+            "Programación Orientada a Objetos",
+            "Arquitectura de Computadores",
+            "Álgebra Lineal",
+            "Inglés II"
+        ]
+    },
+    {
+        numero: 3,
+        asignaturas: [
+            "Matemática III",
+            "Estructura de Datos",
+            "Sistemas Operativos",
+            "Base de Datos",
+            "Probabilidad y Estadística"
+        ]
+    },
+    {
+        numero: 4,
+        asignaturas: [
+            "Análisis de Algoritmos",
+            "Programación de Sistemas",
+            "Diseño de Base de Datos",
+            "Redes de Computadores",
+            "Inglés III"
+        ]
+    },
+    {
+        numero: 5,
+        asignaturas: [
+            "Ingeniería de Software I",
+            "Desarrollo de Aplicaciones Web",
+            "Sistemas Distribuidos",
+            "Inteligencia Artificial",
+            "Gestión de Proyectos TI"
+        ]
+    },
+    {
+        numero: 6,
+        asignaturas: [
+            "Ingeniería de Software II",
+            "Desarrollo de Aplicaciones Móviles",
+            "Seguridad Informática",
+            "Machine Learning",
+            "Emprendimiento e Innovación"
+        ]
+    },
+    {
+        numero: 7,
+        asignaturas: [
+            "Arquitectura de Software",
+            "Cloud Computing",
+            "Big Data y Analytics",
+            "Electivo I",
+            "Práctica Profesional"
+        ]
+    },
+    {
+        numero: 8,
+        asignaturas: [
+            "Calidad de Software",
+            "DevOps y CI/CD",
+            "Ética Profesional",
+            "Electivo II",
+            "Proyecto de Título"
+        ]
+    }
+];
 ---
 
 <section id="curriculum" class="bg-neutral-100 dark:bg-neutral-900/50 py-10 lg:py-14 scroll-mt-20">
@@ -8,134 +90,31 @@
                 Malla Curricular
             </h2>
             <p class="mt-4 text-pretty text-neutral-600 dark:text-neutral-400">
-                Áreas de formación profesional
+                Plan de estudios por semestre - 8 semestres (4 años)
             </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <!-- Área 1 -->
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div class="flex items-center justify-center size-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-4">
-                    <svg class="size-6 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="16 18 22 12 16 6"/>
-                        <polyline points="8 6 2 12 8 18"/>
-                    </svg>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {semestres.map((semestre) => (
+                <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+                    <div class="flex items-center justify-center size-14 bg-gradient-to-br from-blue-500 to-green-500 rounded-lg mb-4 mx-auto">
+                        <span class="text-2xl font-bold text-white">{semestre.numero}</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-center text-neutral-800 dark:text-neutral-200 mb-4">
+                        Semestre {semestre.numero}
+                    </h3>
+                    <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
+                        {semestre.asignaturas.map((asignatura) => (
+                            <li class="flex items-start">
+                                <svg class="size-4 text-green-500 dark:text-green-400 mt-0.5 mr-2 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>{asignatura}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-                <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
-                    Programación
-                </h3>
-                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-                    <li>• Fundamentos de Programación</li>
-                    <li>• Estructuras de Datos</li>
-                    <li>• Algoritmos Avanzados</li>
-                    <li>• Programación Orientada a Objetos</li>
-                    <li>• Desarrollo Web</li>
-                </ul>
-            </div>
-
-            <!-- Área 2 -->
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div class="flex items-center justify-center size-12 bg-green-100 dark:bg-green-900/30 rounded-lg mb-4">
-                    <svg class="size-6 text-green-600 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect width="18" height="18" x="3" y="3" rx="2"/>
-                        <path d="M7 7h10"/>
-                        <path d="M7 12h10"/>
-                        <path d="M7 17h10"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
-                    Bases de Datos
-                </h3>
-                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-                    <li>• Modelamiento de Datos</li>
-                    <li>• SQL y Consultas</li>
-                    <li>• Bases de Datos NoSQL</li>
-                    <li>• Administración de BD</li>
-                    <li>• Big Data</li>
-                </ul>
-            </div>
-
-            <!-- Área 3 -->
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div class="flex items-center justify-center size-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-4">
-                    <svg class="size-6 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
-                        <circle cx="12" cy="12" r="3"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
-                    Ingeniería de Software
-                </h3>
-                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-                    <li>• Análisis y Diseño</li>
-                    <li>• Arquitectura de Software</li>
-                    <li>• Metodologías Ágiles</li>
-                    <li>• Testing y Calidad</li>
-                    <li>• DevOps</li>
-                </ul>
-            </div>
-
-            <!-- Área 4 -->
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div class="flex items-center justify-center size-12 bg-green-100 dark:bg-green-900/30 rounded-lg mb-4">
-                    <svg class="size-6 text-green-600 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2v20M2 12h20"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
-                    Redes y Sistemas
-                </h3>
-                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-                    <li>• Redes de Computadores</li>
-                    <li>• Sistemas Operativos</li>
-                    <li>• Seguridad Informática</li>
-                    <li>• Cloud Computing</li>
-                    <li>• Infraestructura TI</li>
-                </ul>
-            </div>
-
-            <!-- Área 5 -->
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div class="flex items-center justify-center size-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg mb-4">
-                    <svg class="size-6 text-blue-600 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                        <line x1="12" y1="22.08" x2="12" y2="12"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
-                    Inteligencia Artificial
-                </h3>
-                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-                    <li>• Machine Learning</li>
-                    <li>• Deep Learning</li>
-                    <li>• Procesamiento de Lenguaje</li>
-                    <li>• Visión Computacional</li>
-                    <li>• Data Science</li>
-                </ul>
-            </div>
-
-            <!-- Área 6 -->
-            <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow">
-                <div class="flex items-center justify-center size-12 bg-green-100 dark:bg-green-900/30 rounded-lg mb-4">
-                    <svg class="size-6 text-green-600 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold text-neutral-800 dark:text-neutral-200 mb-3">
-                    Gestión y Liderazgo
-                </h3>
-                <ul class="space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
-                    <li>• Gestión de Proyectos</li>
-                    <li>• Emprendimiento</li>
-                    <li>• Trabajo en Equipo</li>
-                    <li>• Comunicación Efectiva</li>
-                    <li>• Ética Profesional</li>
-                </ul>
-            </div>
+            ))}
         </div>
     </div>
 </section>

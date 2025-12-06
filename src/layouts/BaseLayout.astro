@@ -37,6 +37,33 @@ const normalizeTitle = !title ? SITE.title : `${title} | ${SITE.title}`
          }
          </script>
         <script is:inline src="/vendor/lenis/lenis1.1.5.min.js"></script>
+        <script is:inline src="/vendor/preline/collapse2.1.0.min.js"></script>
+        <script is:inline>
+        // Inicializar acordeones manualmente
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordions = document.querySelectorAll('.hs-accordion');
+            
+            accordions.forEach(accordion => {
+                const toggle = accordion.querySelector('.hs-accordion-toggle');
+                const content = accordion.querySelector('.hs-accordion-content');
+                
+                if (toggle && content) {
+                    toggle.addEventListener('click', () => {
+                        const isActive = accordion.classList.contains('active');
+                        
+                        // Toggle solo el acordeón actual (sin cerrar los demás)
+                        if (isActive) {
+                            accordion.classList.remove('active');
+                            content.classList.add('hidden');
+                        } else {
+                            accordion.classList.add('active');
+                            content.classList.remove('hidden');
+                        }
+                    });
+                }
+            });
+        });
+        </script>
         <script is:inline>
         const lenis = new Lenis({
             duration: 1.2,

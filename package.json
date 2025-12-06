@@ -1,21 +1,12 @@
 {
-  "name": "godruoyi.com",
+  "name": "utem-informatica",
   "type": "module",
   "version": "1.0.0",
-  "homepage": "https://godruoyi.com",
-  "bugs": {
-    "url": "https://github.com/godruoyi/gblog/issues",
-    "email": "godruoyi@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/godruoyi/gblog.git"
-  },
+  "homepage": "https://utem.cl",
   "license": "MIT",
   "author": {
-    "name": "Godruoyi",
-    "email": "godruoyi@gmail.com",
-    "url": "https://godruoyi.com"
+    "name": "UTEM",
+    "url": "https://utem.cl"
   },
   "scripts": {
     "dev": "astro dev",
