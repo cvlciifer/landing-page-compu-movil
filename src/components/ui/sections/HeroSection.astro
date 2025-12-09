@@ -26,6 +26,27 @@ interface Props {
 }
 ---
 
+<style>
+    .logo-avatar {
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+    }
+    
+    .logo-avatar.spinning {
+        animation: coinFlip 0.8s ease-in-out;
+    }
+    
+    @keyframes coinFlip {
+        0% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+</style>
+
 <section class="mx-auto grid max-w-[85rem] gap-4 px-4 pt-14 pb-6 lg:pt-20 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full relative overflow-hidden">
     <!-- Matrix Rain Effect - Only visible in dark mode -->
     <canvas id="matrix-canvas" class="absolute inset-0 opacity-0 dark:opacity-30 pointer-events-none transition-opacity duration-500"></canvas>
@@ -35,7 +56,7 @@ interface Props {
             <Fragment set:html={title} />
         </h1>
         {subTitle && (
-            <p class="mt-6 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-neutral-400 lg:w-4/5">
+            <p class="mt-6 text-pretty text-lg leading-relaxed text-neutral-700 dark:text-white lg:w-4/5">
                 {subTitle}
             </p>
         )}
@@ -49,15 +70,17 @@ interface Props {
     <div class="w-full hidden md:block relative z-10">
         <div class="top-12 overflow-hidden w-full md:ml-4 flex justify-center">
             {src && alt && (
-                <Image
-                    src={src}
-                    alt={alt}
-                    class="h-full w-[320px] scale-100 object-cover object-center"
-                    draggable="false"
-                    loading="eager"
-                    format="avif"
-                    disableBlur={true}
-                />
+                <div id="logo-avatar" class="logo-avatar relative w-[320px] h-[320px] rounded-full overflow-hidden bg-white dark:bg-neutral-800 p-4 shadow-xl">
+                    <Image
+                        src={src}
+                        alt={alt}
+                        class="h-full w-full scale-100 object-contain object-center rounded-full"
+                        draggable="false"
+                        loading="eager"
+                        format="avif"
+                        disableBlur={true}
+                    />
+                </div>
             )}
         </div>
     </div>
@@ -125,6 +148,17 @@ interface Props {
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+        });
+    }
+
+    // Logo flip animation
+    const logoAvatar = document.getElementById('logo-avatar');
+    if (logoAvatar) {
+        logoAvatar.addEventListener('click', () => {
+            logoAvatar.classList.add('spinning');
+            setTimeout(() => {
+                logoAvatar.classList.remove('spinning');
+            }, 800);
         });
     }
 </script>

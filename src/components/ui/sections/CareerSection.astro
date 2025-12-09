@@ -1,6 +1,26 @@
 ---
 ---
 
+<style>
+    .career-item {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+    }
+    
+    .career-item.from-left {
+        transform: translateX(-50px);
+    }
+    
+    .career-item.from-right {
+        transform: translateX(50px);
+    }
+    
+    .career-item.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+</style>
+
 <section id="career" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full scroll-mt-20">
     <div class="mx-auto max-w-2xl text-center mb-10 lg:mb-14">
         <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
@@ -19,51 +39,51 @@
             </h3>
             
             <div class="space-y-4">
-                <div class="flex gap-4 items-start">
+                <div class="career-item from-left flex gap-4 items-start bg-neutral-50 dark:bg-white rounded-lg p-4">
                     <div class="flex-shrink-0 mt-1">
-                        <svg class="size-6 text-green-500 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="size-6 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Empresas de Tecnología</h4>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400">Desarrollo de software, aplicaciones móviles y soluciones cloud</p>
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Empresas de Tecnología</h4>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-700">Desarrollo de software, aplicaciones móviles y soluciones cloud</p>
                     </div>
                 </div>
 
-                <div class="flex gap-4 items-start">
+                <div class="career-item from-right flex gap-4 items-start bg-neutral-50 dark:bg-white rounded-lg p-4">
                     <div class="flex-shrink-0 mt-1">
-                        <svg class="size-6 text-green-500 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="size-6 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Sector Financiero</h4>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400">Bancos, fintech y empresas de servicios financieros</p>
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Sector Financiero</h4>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-700">Bancos, fintech y empresas de servicios financieros</p>
                     </div>
                 </div>
 
-                <div class="flex gap-4 items-start">
+                <div class="career-item from-left flex gap-4 items-start bg-neutral-50 dark:bg-white rounded-lg p-4">
                     <div class="flex-shrink-0 mt-1">
-                        <svg class="size-6 text-green-500 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="size-6 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Consultoría TI</h4>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400">Asesoramiento tecnológico y transformación digital</p>
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Consultoría TI</h4>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-700">Asesoramiento tecnológico y transformación digital</p>
                     </div>
                 </div>
 
-                <div class="flex gap-4 items-start">
+                <div class="career-item from-right flex gap-4 items-start bg-neutral-50 dark:bg-white rounded-lg p-4">
                     <div class="flex-shrink-0 mt-1">
-                        <svg class="size-6 text-green-500 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="size-6 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
                     </div>
                     <div>
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Emprendimiento</h4>
-                        <p class="text-sm text-neutral-600 dark:text-neutral-400">Startups y proyectos tecnológicos propios</p>
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Emprendimiento</h4>
+                        <p class="text-sm text-neutral-600 dark:text-neutral-700">Startups y proyectos tecnológicos propios</p>
                     </div>
                 </div>
             </div>
@@ -76,31 +96,52 @@
             </h3>
             
             <div class="grid gap-4">
-                <div class="bg-neutral-100 dark:bg-neutral-900/30 rounded-lg p-4">
-                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Desarrollador Full Stack</h4>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Frontend, Backend y Bases de Datos</p>
+                <div class="career-item from-right bg-neutral-100 dark:bg-white rounded-lg p-4">
+                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Desarrollador Full Stack</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-700 mt-1">Frontend, Backend y Bases de Datos</p>
                 </div>
 
-                <div class="bg-neutral-100 dark:bg-neutral-900/30 rounded-lg p-4">
-                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Arquitecto de Software</h4>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Diseño de sistemas escalables</p>
+                <div class="career-item from-left bg-neutral-100 dark:bg-white rounded-lg p-4">
+                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Arquitecto de Software</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-700 mt-1">Diseño de sistemas escalables</p>
                 </div>
 
-                <div class="bg-neutral-100 dark:bg-neutral-900/30 rounded-lg p-4">
-                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">DevOps Engineer</h4>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Automatización y despliegue continuo</p>
+                <div class="career-item from-right bg-neutral-100 dark:bg-white rounded-lg p-4">
+                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">DevOps Engineer</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-700 mt-1">Automatización y despliegue continuo</p>
                 </div>
 
-                <div class="bg-neutral-100 dark:bg-neutral-900/30 rounded-lg p-4">
-                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Data Scientist</h4>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Análisis de datos e IA</p>
+                <div class="career-item from-left bg-neutral-100 dark:bg-white rounded-lg p-4">
+                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Data Scientist</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-700 mt-1">Análisis de datos e IA</p>
                 </div>
 
-                <div class="bg-neutral-100 dark:bg-neutral-900/30 rounded-lg p-4">
-                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Líder de Proyectos TI</h4>
-                    <p class="text-sm text-neutral-600 dark:text-neutral-400 mt-1">Gestión y coordinación de equipos</p>
+                <div class="career-item from-right bg-neutral-100 dark:bg-white rounded-lg p-4">
+                    <h4 class="font-semibold text-neutral-800 dark:text-neutral-900">Líder de Proyectos TI</h4>
+                    <p class="text-sm text-neutral-600 dark:text-neutral-700 mt-1">Gestión y coordinación de equipos</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const careerItems = document.querySelectorAll('.career-item');
+        careerItems.forEach(item => observer.observe(item));
+    });
+</script>

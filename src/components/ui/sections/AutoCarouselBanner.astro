@@ -1,0 +1,92 @@
+---
+---
+
+<style>
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-container {
+            height: 250px;
+        }
+    }
+
+    .carousel-track {
+        display: flex;
+        width: 300%;
+        height: 100%;
+        animation: slide 15s infinite;
+    }
+
+    .carousel-slide {
+        flex: 0 0 33.333%;
+        width: 33.333%;
+        height: 100%;
+        position: relative;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel-slide-desktop {
+        display: block;
+    }
+
+    .carousel-slide-mobile {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-slide-desktop {
+            display: none;
+        }
+
+        .carousel-slide-mobile {
+            display: block;
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        33.333% {
+            transform: translateX(-33.333%);
+        }
+        66.666% {
+            transform: translateX(-66.666%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+</style>
+
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img class="carousel-slide-desktop" src="/src/images/ing_informatica.jpg" alt="Ingeniería Informática UTEM" loading="eager" />
+                <img class="carousel-slide-mobile" src="/src/images/logo_movil.png" alt="UTEM Logo" loading="eager" />
+            </div>
+            <div class="carousel-slide">
+                <img class="carousel-slide-desktop" src="/src/images/utem_banner.jpg" alt="UTEM Banner" loading="eager" />
+                <img class="carousel-slide-mobile" src="/src/images/utem_calidad_movil.png" alt="UTEM Calidad" loading="eager" />
+            </div>
+            <div class="carousel-slide">
+                <img class="carousel-slide-desktop" src="/src/images/utem_calidad.jpg" alt="UTEM Calidad" loading="eager" />
+                <img class="carousel-slide-mobile" src="/src/images/utem_movil.jpeg" alt="UTEM" loading="eager" />
+            </div>
+        </div>
+    </div>
+</section>

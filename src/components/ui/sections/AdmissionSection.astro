@@ -1,6 +1,26 @@
 ---
 ---
 
+<style>
+    .admission-step {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+    }
+    
+    .admission-step.from-left {
+        transform: translateX(-50px);
+    }
+    
+    .admission-step.from-right {
+        transform: translateX(50px);
+    }
+    
+    .admission-step.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+</style>
+
 <section id="admission" class="bg-neutral-100 dark:bg-neutral-900/50 py-10 lg:py-14 scroll-mt-20">
     <div class="mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8 2xl:max-w-full">
         <div class="mx-auto max-w-2xl text-center mb-10 lg:mb-14">
@@ -20,18 +40,18 @@
                 <!-- Steps -->
                 <div class="space-y-8">
                     <!-- Step 1 -->
-                    <div class="relative flex items-center md:justify-start">
+                    <div class="admission-step from-left relative flex items-center md:justify-start">
                         <div class="md:w-1/2 md:pr-8 md:text-right">
-                            <div class="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+                            <div class="bg-white dark:bg-neutral-200 rounded-lg p-6 shadow-sm">
                                 <div class="flex items-center gap-3 md:justify-end mb-2">
-                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-900">
                                         Rendir la PAES
                                     </h3>
                                     <div class="flex items-center justify-center size-10 rounded-full bg-blue-500 text-white font-bold flex-shrink-0">
                                         1
                                     </div>
                                 </div>
-                                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                                <p class="text-sm text-neutral-600 dark:text-neutral-700">
                                     Inscríbete y rinde la Prueba de Acceso a la Educación Superior (PAES)
                                 </p>
                             </div>
@@ -40,18 +60,18 @@
                     </div>
 
                     <!-- Step 2 -->
-                    <div class="relative flex items-center md:justify-end">
+                    <div class="admission-step from-right relative flex items-center md:justify-end">
                         <div class="md:w-1/2 md:pl-8">
-                            <div class="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+                            <div class="bg-white dark:bg-neutral-200 rounded-lg p-6 shadow-sm">
                                 <div class="flex items-center gap-3 mb-2">
                                     <div class="flex items-center justify-center size-10 rounded-full bg-green-500 text-white font-bold flex-shrink-0">
                                         2
                                     </div>
-                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-900">
                                         Postula
                                     </h3>
                                 </div>
-                                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                                <p class="text-sm text-neutral-600 dark:text-neutral-700">
                                     Postula a través del Sistema de Acceso con tu puntaje PAES
                                 </p>
                             </div>
@@ -60,18 +80,18 @@
                     </div>
 
                     <!-- Step 3 -->
-                    <div class="relative flex items-center md:justify-start">
+                    <div class="admission-step from-left relative flex items-center md:justify-start">
                         <div class="md:w-1/2 md:pr-8 md:text-right">
-                            <div class="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+                            <div class="bg-white dark:bg-neutral-200 rounded-lg p-6 shadow-sm">
                                 <div class="flex items-center gap-3 md:justify-end mb-2">
-                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-900">
                                         Revisa Resultados
                                     </h3>
                                     <div class="flex items-center justify-center size-10 rounded-full bg-blue-500 text-white font-bold flex-shrink-0">
                                         3
                                     </div>
                                 </div>
-                                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                                <p class="text-sm text-neutral-600 dark:text-neutral-700">
                                     Espera los resultados de selección y verifica si quedaste seleccionado
                                 </p>
                             </div>
@@ -80,18 +100,18 @@
                     </div>
 
                     <!-- Step 4 -->
-                    <div class="relative flex items-center md:justify-end">
+                    <div class="admission-step from-right relative flex items-center md:justify-end">
                         <div class="md:w-1/2 md:pl-8">
-                            <div class="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+                            <div class="bg-white dark:bg-neutral-200 rounded-lg p-6 shadow-sm">
                                 <div class="flex items-center gap-3 mb-2">
                                     <div class="flex items-center justify-center size-10 rounded-full bg-green-500 text-white font-bold flex-shrink-0">
                                         4
                                     </div>
-                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-900">
                                         Matrícula
                                     </h3>
                                 </div>
-                                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                                <p class="text-sm text-neutral-600 dark:text-neutral-700">
                                     Completa el proceso de matrícula en las fechas establecidas
                                 </p>
                             </div>
@@ -100,18 +120,18 @@
                     </div>
 
                     <!-- Step 5 -->
-                    <div class="relative flex items-center md:justify-start">
+                    <div class="admission-step from-left relative flex items-center md:justify-start">
                         <div class="md:w-1/2 md:pr-8 md:text-right">
-                            <div class="bg-white dark:bg-neutral-800 rounded-lg p-6 shadow-sm">
+                            <div class="bg-white dark:bg-neutral-200 rounded-lg p-6 shadow-sm">
                                 <div class="flex items-center gap-3 md:justify-end mb-2">
-                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-200">
+                                    <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-900">
                                         ¡Comienza tu carrera!
                                     </h3>
                                     <div class="flex items-center justify-center size-10 rounded-full bg-blue-500 text-white font-bold flex-shrink-0">
                                         5
                                     </div>
                                 </div>
-                                <p class="text-sm text-neutral-600 dark:text-neutral-400">
+                                <p class="text-sm text-neutral-600 dark:text-neutral-700">
                                     Asiste a la inducción y comienza tus clases en marzo
                                 </p>
                             </div>
@@ -123,3 +143,24 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const admissionSteps = document.querySelectorAll('.admission-step');
+        admissionSteps.forEach(step => observer.observe(step));
+    });
+</script>

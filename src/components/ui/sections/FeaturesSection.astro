@@ -2,6 +2,33 @@
 ---
 
 <section id="features" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full scroll-mt-20">
+    <style>
+        .feature-card {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 640px) {
+            .feature-card {
+                transition-delay: 0s;
+            }
+            
+            .feature-card:nth-child(1) { transition-delay: 0.1s; }
+            .feature-card:nth-child(2) { transition-delay: 0.2s; }
+            .feature-card:nth-child(3) { transition-delay: 0.3s; }
+            .feature-card:nth-child(4) { transition-delay: 0.4s; }
+            .feature-card:nth-child(5) { transition-delay: 0.5s; }
+            .feature-card:nth-child(6) { transition-delay: 0.6s; }
+        }
+    </style>
+
+<section id="features" class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full scroll-mt-20">
     <div class="mx-auto max-w-2xl text-center mb-10 lg:mb-14">
         <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
             ¿Por qué Ingeniería en Informática UTEM?
@@ -12,21 +39,21 @@
     </div>
 
     <div class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24">
-        <div class="max-w-5xl px-4 sm:px-6 lg:px-8 mx-auto">
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+        <div class="max-w-5xl px-4 sm:px-6 lg:px-8 mx-auto w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 <!-- Característica 1 -->
-                <div class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div class="feature-card group flex flex-col bg-neutral-100 dark:bg-white rounded-xl hover:shadow-lg transition-all duration-300">
                     <div class="p-4 md:p-5">
                         <div class="flex">
-                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-green-500 dark:text-neutral-300 dark:group-hover:text-green-400 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-green-500 dark:text-neutral-800 dark:group-hover:text-green-600 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                                 <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                             </svg>
                             <div class="grow ms-5">
-                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-green-500 dark:text-neutral-300 dark:group-hover:text-green-400 transition-colors">
+                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-green-500 dark:text-neutral-800 dark:group-hover:text-green-600 transition-colors">
                                     Acreditación y Calidad
                                 </span>
-                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-800">
                                     Carrera acreditada con excelencia académica reconocida a nivel nacional
                                 </span>
                             </div>
@@ -35,20 +62,20 @@
                 </div>
 
                 <!-- Característica 2 -->
-                <div class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div class="feature-card group flex flex-col bg-neutral-100 dark:bg-white rounded-xl hover:shadow-lg transition-all duration-300">
                     <div class="p-4 md:p-5">
                         <div class="flex">
-                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-blue-500 dark:text-neutral-300 dark:group-hover:text-blue-400 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-blue-500 dark:text-neutral-800 dark:group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect width="18" height="18" x="3" y="3" rx="2"/>
                                 <path d="M7 7h10"/>
                                 <path d="M7 12h10"/>
                                 <path d="M7 17h10"/>
                             </svg>
                             <div class="grow ms-5">
-                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-blue-500 dark:text-neutral-300 dark:group-hover:text-blue-400 transition-colors">
+                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-blue-500 dark:text-neutral-800 dark:group-hover:text-blue-600 transition-colors">
                                     Formación Integral
                                 </span>
-                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-800">
                                     Dominio técnico en desarrollo de software, bases de datos, redes y ciberseguridad
                                 </span>
                             </div>
@@ -57,20 +84,20 @@
                 </div>
 
                 <!-- Característica 3 -->
-                <div class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div class="feature-card group flex flex-col bg-neutral-100 dark:bg-white rounded-xl hover:shadow-lg transition-all duration-300">
                     <div class="p-4 md:p-5">
                         <div class="flex">
-                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-green-500 dark:text-neutral-300 dark:group-hover:text-green-400 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-green-500 dark:text-neutral-800 dark:group-hover:text-green-600 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                                 <circle cx="9" cy="7" r="4"/>
                                 <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                             </svg>
                             <div class="grow ms-5">
-                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-green-500 dark:text-neutral-300 dark:group-hover:text-green-400 transition-colors">
+                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-green-500 dark:text-neutral-800 dark:group-hover:text-green-600 transition-colors">
                                     Vinculación con la Industria
                                 </span>
-                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-800">
                                     Convenios con empresas líderes para prácticas profesionales y proyectos reales
                                 </span>
                             </div>
@@ -79,17 +106,17 @@
                 </div>
 
                 <!-- Característica 4 -->
-                <div class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div class="feature-card group flex flex-col bg-neutral-100 dark:bg-white rounded-xl hover:shadow-lg transition-all duration-300">
                     <div class="p-4 md:p-5">
                         <div class="flex">
-                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-blue-500 dark:text-neutral-300 dark:group-hover:text-blue-400 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-blue-500 dark:text-neutral-800 dark:group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 2v20M2 12h20"/>
                             </svg>
                             <div class="grow ms-5">
-                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-blue-500 dark:text-neutral-300 dark:group-hover:text-blue-400 transition-colors">
+                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-blue-500 dark:text-neutral-800 dark:group-hover:text-blue-600 transition-colors">
                                     Universidad Estatal
                                 </span>
-                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-800">
                                     Educación pública de calidad con gratuidad y beneficios estudiantiles
                                 </span>
                             </div>
@@ -98,19 +125,19 @@
                 </div>
 
                 <!-- Característica 5 -->
-                <div class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div class="feature-card group flex flex-col bg-neutral-100 dark:bg-white rounded-xl hover:shadow-lg transition-all duration-300">
                     <div class="p-4 md:p-5">
                         <div class="flex">
-                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-green-500 dark:text-neutral-300 dark:group-hover:text-green-400 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-green-500 dark:text-neutral-800 dark:group-hover:text-green-600 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                                 <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
                                 <line x1="12" y1="22.08" x2="12" y2="12"/>
                             </svg>
                             <div class="grow ms-5">
-                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-green-500 dark:text-neutral-300 dark:group-hover:text-green-400 transition-colors">
+                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-green-500 dark:text-neutral-800 dark:group-hover:text-green-600 transition-colors">
                                     Innovación y Emprendimiento
                                 </span>
-                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-800">
                                     Desarrolla proyectos innovadores y habilidades para emprender en tecnología
                                 </span>
                             </div>
@@ -119,18 +146,18 @@
                 </div>
 
                 <!-- Característica 6 -->
-                <div class="group flex flex-col bg-neutral-100 dark:bg-neutral-900/30 rounded-xl hover:shadow-lg transition-all duration-300">
+                <div class="feature-card group flex flex-col bg-neutral-100 dark:bg-white rounded-xl hover:shadow-lg transition-all duration-300">
                     <div class="p-4 md:p-5">
                         <div class="flex">
-                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-blue-500 dark:text-neutral-300 dark:group-hover:text-blue-400 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <svg class="mt-1 flex-shrink-0 size-6 text-neutral-600 group-hover:text-blue-500 dark:text-neutral-800 dark:group-hover:text-blue-600 transition-colors" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                             </svg>
                             <div class="grow ms-5">
-                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-blue-500 dark:text-neutral-300 dark:group-hover:text-blue-400 transition-colors">
+                                <span class="block text-lg font-bold text-neutral-600 group-hover:text-blue-500 dark:text-neutral-800 dark:group-hover:text-blue-600 transition-colors">
                                     Infraestructura Moderna
                                 </span>
-                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                                <span class="mt-1 block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-800">
                                     Laboratorios equipados y espacios colaborativos para tu aprendizaje
                                 </span>
                             </div>
@@ -141,3 +168,24 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const featureCards = document.querySelectorAll('.feature-card');
+        featureCards.forEach(card => observer.observe(card));
+    });
+</script>

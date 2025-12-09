@@ -3,18 +3,19 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import HeroSection from '@components/ui/sections/HeroSection.astro'
 import StatsSection from '@components/ui/sections/StatsSection.astro'
 import FeaturesSection from '@components/ui/sections/FeaturesSection.astro'
+import AutoCarouselBanner from '@components/ui/sections/AutoCarouselBanner.astro'
 import CareerSection from '@components/ui/sections/CareerSection.astro'
 import CurriculumSection from '@components/ui/sections/CurriculumSection.astro'
 import AdmissionSection from '@components/ui/sections/AdmissionSection.astro'
 import FAQSection from '@components/ui/sections/FAQSection.astro'
 import AboutSection from '@components/ui/sections/AboutSection.astro'
 import ContactSection from '@components/ui/sections/ContactSection.astro'
-import blogHeroImg from '@images/home.png'
+import blogHeroImg from '@images/brand_logo.png'
 ---
 
 <BaseLayout>
     <HeroSection
-        title=`<span class="text-blue-600 dark:text-blue-400">Ingeniería en</span> <span class="text-green-600 dark:text-green-400">Informática</span>`
+        title=`<span class="text-blue-600 dark:text-white">Ingeniería en</span> <span class="text-green-600 dark:text-white">Informática</span>`
         subTitle="Forma parte de la UTEM y conviértete en un profesional integral capaz de liderar proyectos de desarrollo de software, gestionar infraestructura tecnológica y crear soluciones innovadoras que transformen la sociedad digital."
         primaryBtn="Descubre más"
         primaryBtnURL="#features"
@@ -25,6 +26,8 @@ import blogHeroImg from '@images/home.png'
     <StatsSection />
 
     <FeaturesSection />
+
+    <AutoCarouselBanner />
 
     <CareerSection />
 

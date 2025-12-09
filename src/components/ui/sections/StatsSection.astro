@@ -3,57 +3,264 @@
 
 <section class="bg-neutral-100 dark:bg-neutral-900/50 py-10 lg:py-14">
     <div class="mx-auto max-w-[85rem] px-4 sm:px-6 lg:px-8 2xl:max-w-full">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Carrusel para móvil -->
+        <div class="sm:hidden">
+            <div id="stats-carousel" class="overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-4">
+                <div id="carousel-track" class="flex gap-6 pb-4 px-4">
+                <!-- Stat 1 -->
+                <div class="min-w-[calc(100vw-2rem)] flex-shrink-0 snap-center text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex justify-center items-center mb-3">
+                        <svg class="size-8 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">6 años</h3>
+                    <p class="mt-2 text-neutral-600 dark:text-neutral-700">Acreditada</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="min-w-[calc(100vw-2rem)] flex-shrink-0 snap-center text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex justify-center items-center mb-3">
+                        <svg class="size-8 text-blue-500 dark:text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">8</h3>
+                    <p class="mt-2 text-neutral-600 dark:text-neutral-700">Semestres</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="min-w-[calc(100vw-2rem)] flex-shrink-0 snap-center text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex justify-center items-center mb-3">
+                        <svg class="size-8 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">50+</h3>
+                    <p class="mt-2 text-neutral-600 dark:text-neutral-700">Proyectos Anuales</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="min-w-[calc(100vw-2rem)] flex-shrink-0 snap-center text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
+                    <div class="flex justify-center items-center mb-3">
+                        <svg class="size-8 text-blue-500 dark:text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">100%</h3>
+                    <p class="mt-2 text-neutral-600 dark:text-neutral-700">Gratuidad</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicadores de posición -->
+        <div class="sm:hidden flex justify-center gap-2 mt-4">
+            <button class="carousel-dot w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600 transition-all" data-index="0"></button>
+            <button class="carousel-dot w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600 transition-all" data-index="1"></button>
+            <button class="carousel-dot w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600 transition-all" data-index="2"></button>
+            <button class="carousel-dot w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600 transition-all" data-index="3"></button>
+        </div>
+    </div>
+
+        <!-- Grid para tablet y desktop -->
+        <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Stat 1 -->
-            <div class="text-center">
+            <div class="text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
                 <div class="flex justify-center items-center mb-3">
-                    <svg class="size-8 text-green-500 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="size-8 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                         <circle cx="9" cy="7" r="4"/>
                         <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
                         <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-200">6 años</h3>
-                <p class="mt-2 text-neutral-600 dark:text-neutral-400">Acreditada</p>
+                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">6 años</h3>
+                <p class="mt-2 text-neutral-600 dark:text-neutral-700">Acreditada</p>
             </div>
 
             <!-- Stat 2 -->
-            <div class="text-center">
+            <div class="text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
                 <div class="flex justify-center items-center mb-3">
-                    <svg class="size-8 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="size-8 text-blue-500 dark:text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                         <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                     </svg>
                 </div>
-                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-200">8</h3>
-                <p class="mt-2 text-neutral-600 dark:text-neutral-400">Semestres</p>
+                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">8</h3>
+                <p class="mt-2 text-neutral-600 dark:text-neutral-700">Semestres</p>
             </div>
 
             <!-- Stat 3 -->
-            <div class="text-center">
+            <div class="text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
                 <div class="flex justify-center items-center mb-3">
-                    <svg class="size-8 text-green-500 dark:text-green-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="size-8 text-green-500 dark:text-green-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
                         <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
                         <line x1="12" y1="22.08" x2="12" y2="12"/>
                     </svg>
                 </div>
-                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-200">50+</h3>
-                <p class="mt-2 text-neutral-600 dark:text-neutral-400">Proyectos Anuales</p>
+                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">50+</h3>
+                <p class="mt-2 text-neutral-600 dark:text-neutral-700">Proyectos Anuales</p>
             </div>
 
             <!-- Stat 4 -->
-            <div class="text-center">
+            <div class="text-center bg-white dark:bg-white rounded-xl p-6 shadow-sm">
                 <div class="flex justify-center items-center mb-3">
-                    <svg class="size-8 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="size-8 text-blue-500 dark:text-blue-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9 22 9 12 15 12 15 22"/>
                     </svg>
                 </div>
-                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-200">100%</h3>
-                <p class="mt-2 text-neutral-600 dark:text-neutral-400">Gratuidad</p>
+                <h3 class="text-4xl font-bold text-neutral-800 dark:text-neutral-800">100%</h3>
+                <p class="mt-2 text-neutral-600 dark:text-neutral-700">Gratuidad</p>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .carousel-dot.active {
+        background-color: #3b82f6;
+        width: 2rem;
+    }
+</style>
+
+<script>
+    const carousel = document.getElementById('stats-carousel');
+    const carouselTrack = document.getElementById('carousel-track');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentIndex = 0;
+    let autoScrollInterval: number;
+    let isScrolling = false;
+
+    if (carousel && carouselTrack && dots.length > 0) {
+        // Duplicar elementos para efecto infinito
+        const originalItems = Array.from(carouselTrack.children);
+        originalItems.forEach(item => {
+            const clone = item.cloneNode(true) as HTMLElement;
+            carouselTrack.appendChild(clone);
+        });
+
+        const totalOriginalItems = originalItems.length;
+        // Función para actualizar el scroll
+        const scrollToIndex = (index: number, smooth = true) => {
+            isScrolling = true;
+            const items = carousel.querySelectorAll('.snap-center');
+            if (items[index]) {
+                const item = items[index] as HTMLElement;
+                const itemOffsetLeft = item.offsetLeft;
+                carousel.scrollTo({
+                    left: itemOffsetLeft,
+                    behavior: smooth ? 'smooth' : 'auto'
+                });
+            }
+            updateDots(index % totalOriginalItems);
+            setTimeout(() => { isScrolling = false; }, smooth ? 500 : 0);
+        };
+
+        // Función para actualizar los dots
+        const updateDots = (index: number) => {
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        };
+
+        // Auto scroll cada 3 segundos
+        const startAutoScroll = () => {
+            autoScrollInterval = window.setInterval(() => {
+                currentIndex = currentIndex + 1;
+                scrollToIndex(currentIndex);
+                
+                // Reset al inicio cuando llegamos al primer elemento duplicado
+                if (currentIndex >= totalOriginalItems) {
+                    setTimeout(() => {
+                        currentIndex = 0;
+                        scrollToIndex(currentIndex, false);
+                    }, 500);
+                }
+            }, 3000);
+        };
+
+        // Detener auto scroll
+        const stopAutoScroll = () => {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+            }
+        };
+
+        // Clicks en los dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                scrollToIndex(index);
+                stopAutoScroll();
+                startAutoScroll();
+            });
+        });
+
+        // Detectar scroll manual con debounce
+        let scrollTimeout: number;
+        carousel.addEventListener('scroll', () => {
+            if (isScrolling) return;
+            
+            clearTimeout(scrollTimeout);
+            scrollTimeout = window.setTimeout(() => {
+                const items = carousel.querySelectorAll('.snap-center');
+                const carouselRect = carousel.getBoundingClientRect();
+                
+                let closestIndex = 0;
+                let closestDistance = Infinity;
+                
+                items.forEach((item, index) => {
+                    const itemRect = item.getBoundingClientRect();
+                    const distance = Math.abs(itemRect.left - carouselRect.left);
+                    
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        closestIndex = index;
+                    }
+                });
+                
+                // Reset al inicio si estamos en los elementos duplicados
+                if (closestIndex >= totalOriginalItems) {
+                    const realIndex = closestIndex % totalOriginalItems;
+                    setTimeout(() => {
+                        scrollToIndex(realIndex, false);
+                        currentIndex = realIndex;
+                    }, 100);
+                } else {
+                    currentIndex = closestIndex;
+                    updateDots(currentIndex % totalOriginalItems);
+                }
+            }, 150);
+        });
+
+        // Pausar al tocar/hacer hover
+        carousel.addEventListener('touchstart', stopAutoScroll);
+        carousel.addEventListener('touchend', startAutoScroll);
+        carousel.addEventListener('mouseenter', stopAutoScroll);
+        carousel.addEventListener('mouseleave', startAutoScroll);
+
+        // Inicializar
+        updateDots(0);
+        startAutoScroll();
+    }
+</script>
